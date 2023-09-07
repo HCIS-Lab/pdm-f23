@@ -1,2 +1,2 @@
 # pdm-f23
-perception and decision making 2023 Fall
+NYCU Perception and Decision Making 2023 Fall
