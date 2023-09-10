@@ -17,7 +17,7 @@ In this course, we are going to build an indoor navigation system in Habitat ste
 ## Installation
 
 ### Clone the repo
-`git clone git@github.com:HCIS-Lab/pdm-f23.git` to download the repo.
+`git clone git@github.com:HCIS-Lab/pdm-f23.git` to download the repo or create a new fork on you own GitHub account.
 
 ```bash
 cd hw0
