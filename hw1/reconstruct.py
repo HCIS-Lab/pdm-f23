@@ -12,42 +12,59 @@ import argparse
 
 
 def depth_image_to_point_cloud(rgb, depth):
-    ## TODO: Get point cloud from rgb and depth image 
-    """
-    Hint: Need to calculate intrinsic matrix first
-    """
+    ### TODO ###
+    # Get point cloud from rgb and depth image 
+    # - Hint: You need to calculate intrinsic matrix of camera
     raise NotImplementedError
     return pcd
 
 
 def preprocess_point_cloud(pcd, voxel_size):
-    ##TODO: Do voxelization to reduce the number of points for less memory usage and speedup
+    ### TODO ###
+    # Do voxelization to reduce the number of points for less memory usage and speedup
     raise NotImplementedError
     return pcd_down
 
 
 def execute_global_registration(source_down, target_down, source_fpfh,
                                 target_fpfh, voxel_size):
+    ### TODO ###
     raise NotImplementedError
     return result
 
 
 def local_icp_algorithm(source_down, target_down, trans_init, threshold):
-    ## TODO: Use Open3D ICP function to implement
+    ### TODO ###
+    # Use Open3D local ICP registration (i.e. point to point or point to plane) 
     raise NotImplementedError
     return result
 
 
 def my_local_icp_algorithm(source_down, target_down, trans_init, voxel_size):
-    ## TODO: Write your own ICP function
+    ### TODO ###
+    # Write your own ICP registration, for the rest, you can also use open3d library.
     raise NotImplementedError
     return result
 
 
-def reconstruct():
-    ## TODO: 
+def reconstruct(args):
+    ### TODO ###
+    # Use above functions to do scene reconstruction
+    # Return reconstructed point cloud and predicted camera poses
     """
+    Example:
+        ...
+        if args.version == 'open3d':
+            result_pcd = local_icp_algorithm()
+        elif args.veresion == 'my_icp':
+            result_pcd = my_local_icp_algorithm()
+        ...
+    
+    Returns:
+        result_pcd: point cloud of whole scene from all images
+        pred_cam_pos: the predicted camera pose (you can get them during the process)
     """
+    
     raise NotImplementedError
     return result_pcd, pred_cam_pos
 
@@ -83,14 +100,13 @@ if __name__ == '__main__':
     elif args.floor == 2:
         args.data_root = "data_collection/second_floor/"
     
-    result_pcd, pred_cam_pos = reconstruct()
-
-    # Draw ground truth line
+    result_pcd, pred_cam_pos = reconstruct(args)
+    
     gt_cam_pos_file = args.data_root + 'GT_pose.npy'
     gt_cam_pos = get_camera_pos(gt_cam_pos_file)
 
+    # Draw ground truth line
     line = np.array([[i, i+1] for i in range(len(gt_cam_pos)-1)])
-
     gt_line_set = o3d.geometry.LineSet(
         points=o3d.utility.Vector3dVector(gt_cam_pos),
         lines=o3d.utility.Vector2iVector(line),
@@ -108,7 +124,7 @@ if __name__ == '__main__':
     pred_line_set.colors = o3d.utility.Vector3dVector(red)
 
     # Calculate L2 distance
-    mean_dist = np.mean(np.linalg.norm(np.asarray(gt_line_set.points)-np.asarray(pred_line_set.points)))
+    mean_dist = np.mean(np.linalg.norm(np.asarray(gt_line_set.points) - np.asarray(pred_line_set.points)))
     print("Mean L2 distance:", mean_dist)
 
     o3d.visualization.draw_geometries([result_pcd, gt_line_set, pred_line_set])
