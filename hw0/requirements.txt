@@ -1,3 +1,4 @@
 cmake
 opencv-contrib-python
 open3d
+Flask==2.1.3
