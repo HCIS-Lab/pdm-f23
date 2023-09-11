@@ -20,7 +20,7 @@ In this course, we are going to build an indoor navigation system in Habitat ste
 `git clone git@github.com:HCIS-Lab/pdm-f23.git` to download the repo.
 
 ```bash
-cd hw0
+cd pdm-f23/hw0
 # Ensure the latest submodules
 git submodule update --init --recursive
 # Create a conda env
