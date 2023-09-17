@@ -169,8 +169,6 @@ if os.path.isdir(data_root):
 for sub_dir in ['rgb/', 'depth/', 'semantic/']:
     os.makedirs(data_root + sub_dir)
 
-f = open(data_root + "GT_Pose.txt", "w")
-
 count = 0
 action = "move_forward"
 
