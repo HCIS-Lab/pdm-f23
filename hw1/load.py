@@ -194,4 +194,4 @@ while True:
         print("INVALID KEY")
         continue
 
-np.save(data_root + 'GT_pose.npy', cam_extr)
+np.save(data_root + 'GT_pose.npy', np.asarray(cam_extr))
