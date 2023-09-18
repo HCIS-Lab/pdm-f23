@@ -33,8 +33,17 @@ def my_local_icp_algorithm(source_down, target_down, trans_init, voxel_size):
     return result
 
 
-def reconstruct():
+def reconstruct(args):
     # TODO: Return results
+    """
+    For example:
+        ...
+        args.version == 'open3d':
+            trans = local_icp_algorithm()
+        args.version == 'my_icp':
+            trans = my_local_icp_algorithm()
+        ...
+    """
     raise NotImplementedError
     return result_pcd, pred_cam_pos
 
