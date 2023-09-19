@@ -30,7 +30,7 @@ conda activate habitat
 # Install requirements
 pip install -r requirements.txt
 # Install habitat-sim from source
-cd habitat-sim && pip install -r requirements.txt && python setup.py install --bullet --headless && cd ..
+cd habitat-sim && pip install -r requirements.txt && python setup.py install --bullet && cd ..
 # Install habitat-lab
 cd habitat-lab && pip install -r requirements.txt && python setup.py develop && cd ..
 ```
