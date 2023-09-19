@@ -7,4 +7,4 @@ Spec: [Google Docs](https://docs.google.com/document/d/1whwLunr64Q5aqhjNhRfl7udZ
 ## Preparation
 In your original dpm-f23 directory, `git pull` to get new `hw1` directory.
 
-As for dataset, you can use the same one in `hw0`.
+As for replica dataset, you can use the same one in `hw0`.
