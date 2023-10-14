@@ -285,7 +285,7 @@ def main():
     args = parser.parse_args()
     
     # adjust [frames_per_room] to collect arbitrary number of  images
-    generator = Generator(path=args.dataset_folder)
+    generator = Generator(path=args.dataset)
     generator.generate(out_folder=args.output, 
                        split_name='train',
                        frames_per_room=100)
