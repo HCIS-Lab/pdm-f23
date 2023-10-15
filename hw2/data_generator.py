@@ -86,9 +86,6 @@ def create_room(x_1, y_1, z_1, x_2, y_2, z_2):
             'z_min': z_min,
             'z_max': z_max}
 
-def rgb_bgr(image):
-    return image[:, :, [2, 1, 0]]
-
 class Generator:
     """Generator for replica dataset, rgb, depth, and semantics.
     """
@@ -186,8 +183,7 @@ class Generator:
         if not os.path.exists(out_folder):
             os.makedirs(out_folder)
         color_observation = observation["color_sensor"]
-        color_img = rgb_bgr(color_observation)
-        color_img = Image.fromarray(color_img)
+        color_img = Image.fromarray(color_observation)
         # save color images
         color_img.save(os.path.join(out_folder, scene+self.filename_from_frame_number(frame_number)))
         self._last_frame = np.array(color_img)
