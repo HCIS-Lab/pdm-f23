@@ -14,13 +14,14 @@ Please check the [issue](https://github.com/CSAILVision/semantic-segmentation-py
 MODEL_NAME=ade20k-mobilenetv2dilated-c1_deepsup
 ENCODER=$MODEL_NAME/encoder_epoch_20.pth
 DECODER=$MODEL_NAME/decoder_epoch_20.pth
-
+```
+```
 MODEL_NAME=ade20k-hrnetv2-c1
 ENCODER=$MODEL_NAME/encoder_epoch_30.pth
 DECODER=$MODEL_NAME/decoder_epoch_30.pth
-
+```
+```
 MODEL_NAME=ade20k-resnet50dilated-ppm_deepsup
 ENCODER=$MODEL_NAME/encoder_epoch_20.pth
 DECODER=$MODEL_NAME/decoder_epoch_20.pth
-
 ```
