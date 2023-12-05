@@ -1,11 +1,13 @@
-# pdm-f23
+# pdm-f23-hw4
 NYCU Perception and Decision Making 2023 Fall
 
 # HW4 Robot Manipulation
 
 ## Installation
 
- Create and activate Conda environment, then install GCC and Python packages.
+Follow the installation instruction in https://github.com/google-research/ravens
+
+1. Create and activate Conda environment, then install GCC and Python packages.
 
 ```shell
 cd ravens
@@ -15,7 +17,11 @@ sudo apt-get update
 sudo apt-get -y install gcc libgl1-mesa-dev
 pip install -r requirements.txt
 ```
-
+2. Install GPU acceleration with NVIDIA CUDA 10.1 and cuDNN 7.6.5 for Tensorflow.
+```bash
+conda install cudatoolkit==10.1.243 -y
+conda install cudnn==7.6.5 -y
+```
 ## Task 1
 
 Implement your_fk function in fk.py
@@ -35,6 +41,6 @@ Test your ik implementation in the Transporter Networks 's frame work by inferen
 **Step 3.** Testing the model and your ik implementaton 
 
  ```shell
-export CUDA_VISIBLE_DEVICES="" # No need to use gpu
-python ravens/test.py --assets_root=./ravens/environments/assets/ --disp=True --task=block-insertion --agent=transporter --n_demos=1000 --n_steps=20000
+# No need to use GPU
+CUDA_VISIBLE_DEVICES=-1 python ravens/test.py --assets_root=./ravens/environments/assets/ --disp=True --task=block-insertion-easy --agent=transporter --n_demos=1000 --n_steps=20000
  ```
