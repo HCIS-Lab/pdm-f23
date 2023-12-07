@@ -1,6 +1,9 @@
 # pdm-f23-hw4
 NYCU Perception and Decision Making 2023 Fall
 
+## Preparation
+In your original pdm-f23 directory, `git pull` to get new `hw4` directory.
+
 # HW4 Robot Manipulation
 
 ## Installation
