@@ -10,6 +10,8 @@ Follow the installation instruction in https://github.com/google-research/ravens
 1. Create and activate Conda environment, then install GCC and Python packages.
 
 ```shell
+git pull
+cd hw4
 cd ravens
 conda create --name pdm-hw4 python=3.7 -y
 conda activate pdm-hw4
@@ -79,10 +81,10 @@ Test your ik implementation in the Transporter Networks 's frame work by inferen
 **Step 2.** Download checkpoint at https://drive.google.com/file/d/1SNs2JI7WSXG-x6s5FFR1Vl96vUJM6ZgE/view?usp=drive_link and put the whole folder under hw4/ravens/checkpoints/
 
 **Step 3.** Testing the model and your ik implementaton 
-
+- execution example
  ```shell
-# No need to use GPU
-CUDA_VISIBLE_DEVICES=-1 python ravens/test.py --assets_root=./ravens/environments/assets/ --disp=True --task=block-insertion-easy --agent=transporter --n_demos=1000 --n_steps=20000
+cd ravens
+CUDA_VISIBLE_DEVICES=-1 python ravens/test.py --assets_root=./ravens/environments/assets/ --disp=True --task=block-insertion-easy --agent=transporter --n_demos=1000 --n_steps=20000# No need to use GPU
 ###################################### log ###########################################
 
 Loading pre-trained model at 20000 iterations.
