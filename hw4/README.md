@@ -79,11 +79,11 @@ python ik.py
 
 Test your ik implementation in the Transporter Networks 's frame work by inferencing "Block Insertion Task" on a mini set of 10 testing data
 
-**Step 1.** Download dataset at https://drive.google.com/file/d/1JrCyrvpi3XeuapfecHs1aVtcfRJWWRTV/view?usp=drive_link and put the whole block-insertion-easy-test/ folder under hw4/ravens/
+**Step 1.** Download dataset at https://drive.google.com/file/d/1JrCyrvpi3XeuapfecHs1aVtcfRJWWRTV/view?usp=drive_link and put the whole `block-insertion-easy-test/` folder under `hw4/ravens/`
 
-**Step 2.** Download checkpoint at https://drive.google.com/file/d/1gEMNGTSXjMyvegp72ivbjCle0ntvcEVB/view?usp=drive_link and put the whole checkpoints/ folder under hw4/ravens/
+**Step 2.** Download checkpoint at https://drive.google.com/file/d/1gEMNGTSXjMyvegp72ivbjCle0ntvcEVB/view?usp=drive_link and put the whole `checkpoints/` folder under `hw4/ravens/`
 
-**Step 3.** Testing the model and your ik implementaton 
+**Step 3.** Testing the model and your ik implementation 
 - execution example
  ```shell
 cd ravens
