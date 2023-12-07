@@ -78,7 +78,7 @@ Test your ik implementation in the Transporter Networks 's frame work by inferen
 
 **Step 1.** Download dataset at https://drive.google.com/file/d/1JrCyrvpi3XeuapfecHs1aVtcfRJWWRTV/view?usp=drive_link and put the whole folder under hw4/ravens/
 
-**Step 2.** Download checkpoint at https://drive.google.com/file/d/1SNs2JI7WSXG-x6s5FFR1Vl96vUJM6ZgE/view?usp=drive_link and put the whole folder under hw4/ravens/checkpoints/
+**Step 2.** Download checkpoint at https://drive.google.com/file/d/1gEMNGTSXjMyvegp72ivbjCle0ntvcEVB/view?usp=drive_link and put the whole folder under hw4/ravens/
 
 **Step 3.** Testing the model and your ik implementaton 
 - execution example
